@@ -1,0 +1,125 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Привет, дорогой! Вы выиграли бесплатную перезарядку кошелёк на сумму 399 рупий</title>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Бесплатная перезарядка">
+<meta property="og:image" content="http://deals-online.in/jio/head.png">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style type="text/css">
+  h2 {
+    height: 50px;
+    background-color: #007ee6;
+    color: #FFF;
+    line-height: 50px;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  article {
+    padding: 1em;
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+
+
+<script type="text/javascript">
+  function next() {
+    location.href = "http://deals-online.in/jio/final.html" + location.search;
+  }
+
+  function setCookie(name, value) {
+    var date = new Date();
+    date.setTime(date.getTime() + 2592000000);
+    var expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + "; " + expires;
+  }
+
+  function getCookie(name) {
+    var searchName = name + "=";
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+      while (cookie.charAt(0) == " ") {
+        cookie = cookie.substring(1);
+      }
+      if (cookie.indexOf(searchName) == 0) {
+        return cookie.substring(searchName.length, cookie.length);
+      }
+    }
+    return 0;
+  }
+
+  var message = "У вас нет разрешения на это";
+  document.onmousedown = function (e) {
+    return navigator.appName == "Netscape" && e.which == 3
+      ? (alert(message), !1)
+      : -1 != navigator.appVersion.indexOf("MSIE") && event.button == 2
+      ? (alert(message), !1)
+      : void 0;
+  };
+</script>
+<img src="..\kk.jpg" class="full">
+
+
+<h2>Бесплатная перезарядка Rs 399 Jio</h2>
+
+<article>
+
+  <p class="text-left">Привет, <span class="name"></span> </p>
+  <p class="text-left">Ваш номер мобильного <span class="number" style="color:#E60033;"></span> может быть перезаряжен на Rs 399 с помощью Jio</p>
+  <p class="text-left" style="font-weight: bold;">Вам нужно поделиться информацией о перезарядке Rs 399 Jio с 10 друзьями/группами в WhatsApp</p>
+  <a href="whatsapp://send?text=*Получите перезарядку Rs 399 от Jio 2020 и делитесь для получения больше, перейдите по ссылке 
+https://www.newtrendmasti.com*" data-action="share/whatsapp/share" class="whatsappBtn btn btn-block">Пригласите друзей</a>
+  <p class="text-left" style="font-weight: bold;">После приглашения нажмите "Перезарядить сейчас".</p><br>
+  <button class="btn btn-block nextPageBtn disabled">Перезарядить сейчас</button>
+</article>
+
+<script type="text/javascript">
+  function whatsappClick() {
+    var remainingShares = 10;
+    var whatsappTimeText = document.querySelectorAll(".whatsappTimeText");
+    for (var i = 0; i < whatsappTimeText.length; i++) {
+      whatsappTimeText[i].innerHTML = "Вам нужно поделиться с минимум %%total%% друзьями/группами. Осталось %%remind%% друзей/групп".replace("%%total%%", "10").replace("%%remind%%", "10");
+    }
+
+    document.querySelector(".whatsappBtn").onclick = function () {
+      setTimeout(function () {
+        if (--remainingShares > 0) {
+          for (var i = 0; i < whatsappTimeText.length; i++) {
+            whatsappTimeText[i].innerHTML = "Вам нужно поделиться с минимум %%total%% друзьями/группами. Осталось %%remind%% друзей/групп".replace("%%total%%", "10").replace("%%remind%%", remainingShares);
+          }
+        } else {
+          for (var i = 0; i < whatsappTimeText.length; i++) {
+            whatsappTimeText[i].innerHTML = "";
+          }
+          document.querySelector(".nextPageBtn").className = document.querySelector(".nextPageBtn").className.replace("disabled", "");
+        }
+      }, 3000);
+    };
+
+    document.querySelector(".nextPageBtn").onclick = function () {
+      if (document.querySelector(".nextPageBtn").className.match("disabled")) {
+        alert("Вам нужно поделиться с минимум %%total%% друзьями/группами. Осталось %%remind%% друзей/групп".replace("%%total%%", "10").replace("%%remind%%", remainingShares));
+      } else {
+        next();
+      }
+    };
+  }
+
+  whatsappClick();
+</script>
+
+<script type="text/javascript">
+  document.querySelector(".name").innerHTML = getCookie("free-recharge_name") || "";
+  document.querySelector(".number").innerHTML = getCookie("free-recharge_number") || "";
+</script>
+
+
+
+</body>
+
+</html>
+
